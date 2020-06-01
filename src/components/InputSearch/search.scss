@@ -1,0 +1,32 @@
+@import 'src/styles/index';
+
+.search {
+  height: 100vh;
+  padding-top: 20%;
+  &-title {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  &-form {
+
+  }
+  &-input {
+    display: block;
+    margin: 0 auto;
+    width: 85%;
+    padding: .5rem;
+    border-radius: 10px;
+  }
+  &-ul {
+    width: 90%;
+    margin: 0 auto;
+  }
+  &-li {
+    padding: 1rem 1.3rem;
+    border-radius: 5px;
+    margin: .3rem 0;
+    background-color: var(--bg-li);
+    border: .5px solid var(--border-color);
+  }
+}
