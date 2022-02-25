@@ -1,0 +1,44 @@
+@import '../../styles/index.scss';
+
+.card {
+	background-color: var(--bg-color-element);
+	margin: 2em;
+	border-radius: 10px;
+	box-shadow: 0px 0px 50px 5px var(--box-shadow-header);
+	transition: 0.5s;
+	width: 300px;
+	height: 380px;
+
+	.image {
+		height: 200px;
+		width: 300px;
+		box-shadow: 0px 0px 10px 0px var(--box-shadow-header);
+		border-radius: 10px 10px 0 0;
+	}
+
+	.infos {
+		padding: 2em;
+
+		.title {
+			font-size: 1.3em;
+			font-weight: 800;
+		}
+
+		.info {
+			font-weight: 600;
+
+			.infoDetail {
+				font-weight: 400;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.card {
+		margin: 2em 0;
+		&:hover {
+			transform: translateY(-10px);
+		}
+	}
+}
