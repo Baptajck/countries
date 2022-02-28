@@ -29,7 +29,7 @@ const Card = ({
 };
 
 Card.propTypes = {
-	capital: PropTypes.string.isRequired,
+	capital: PropTypes.string,
 	flag: PropTypes.string.isRequired,
 	name: PropTypes.string.isRequired,
 	population: PropTypes.number.isRequired,
