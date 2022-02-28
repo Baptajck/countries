@@ -14,14 +14,13 @@
 			align-items: center;
 			width: 80%;
 			margin: 1em;
-			padding: 1em 2em;
+			padding: 1em;
 			border-radius: 10px;
 			background-color: var(--bg-color-element);
-			box-shadow: 0px 0px 20px 5px var(--box-shadow-header);
+			box-shadow: 0px 0px 10px 1px var(--box-shadow-header);
 
 			&Input {
 				all: unset;
-				height: 50px;
 				width: 100%;
 
 				&::placeholder {
@@ -44,6 +43,8 @@
 		.region {
 			position: relative;
 			width: 50%;
+			margin-top: 1em;
+
 			.details {
 				margin: 0;
 				display: flex;
@@ -54,7 +55,7 @@
 				padding: 1.5em;
 				border-radius: 10px;
 				background-color: var(--bg-color-element);
-				box-shadow: 0px 0px 20px 5px var(--box-shadow-header);
+				box-shadow: 0px 0px 10px 1px var(--box-shadow-header);
 
 				&[open] > .summary > .summaryIcon {
 					transform: rotate(180deg);
@@ -77,10 +78,11 @@
 					position: absolute;
 					left: 0;
 					right: 0;
+					z-index: 99;
 					background-color: var(--bg-color-element);
+					box-shadow: 0px 0px 10px 1px var(--box-shadow-header);
 					width: 100%;
 					list-style: none;
-					padding: 0;
 					border-radius: 10px;
 					margin: 2em 1em 1em;
 					padding: 0 1.5em;
@@ -88,8 +90,8 @@
 					.regionItem {
 						margin: 1em 0;
 
-						a:hover {
-							background-color: var(--bg-color-element);
+						&:hover {
+							font-weight: 600;
 						}
 					}
 				}
@@ -115,6 +117,33 @@
 			justify-content: space-between;
 			flex-direction: row;
 			padding: 0;
+		}
+
+		.containerFilter {
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0;
+
+			.search {
+				width: 35%;
+				margin: 1em 0;
+			}
+
+			.region {
+				width: 15%;
+				margin: 0;
+
+				.details {
+					width: auto;
+					margin: 0;
+
+					.regionList {
+						width: auto;
+						margin: 2em 0;
+					}
+				}
+			}
 		}
 	}
 }

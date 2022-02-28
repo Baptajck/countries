@@ -61,7 +61,10 @@ const Home = () => {
 						placeholder='Search for a country...'
 					/>
 				</div>
-				<div className={s.region}>
+				<div
+					className={s.region}
+					onClick={() => refDetails.current.removeAttribute('open')}
+				>
 					<details ref={refDetails} className={s.details}>
 						<summary className={s.summary}>
 							{regionCountries === '' ? 'Filter by region' : regionCountries}
