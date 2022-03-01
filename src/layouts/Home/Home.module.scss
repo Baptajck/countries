@@ -2,7 +2,7 @@
 
 .home {
 	.containerFilter {
-		margin: 2em auto;
+		margin: 0.5em auto 0;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -105,6 +105,11 @@
 		justify-content: center;
 		align-items: center;
 		padding: 0 3em;
+
+		.navlink {
+			all: unset;
+			cursor: default;
+		}
 	}
 }
 

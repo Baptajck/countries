@@ -1,0 +1,148 @@
+@import '../../styles/index.scss';
+
+.countryDetails {
+	padding: 1em 1.5em;
+	font-size: 16px;
+	.containerButton {
+		margin: 2em 0;
+		.button {
+			all: unset;
+			cursor: default;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			background-color: var(--bg-color-element);
+			box-shadow: 0px 0px 50px 5px var(--box-shadow-header);
+			padding: 1em 2em;
+			letter-spacing: 1px;
+			border-radius: 5px;
+
+			&Icon {
+				margin-right: 0.5rem;
+				svg {
+					width: 24px;
+					height: 24px;
+				}
+			}
+		}
+	}
+
+	.containerInfos {
+		margin: 2em 0;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+
+		.flag {
+			width: 100%;
+			height: 230px;
+			border-radius: 5px;
+			box-shadow: 0px 0px 50px 5px var(--box-shadow-header);
+		}
+
+		.name {
+			margin-top: 1em;
+		}
+
+		.infoList {
+			&:first-child {
+				margin-bottom: 2em;
+			}
+
+			.info {
+				font-weight: 600;
+
+				& > span {
+					font-weight: 400;
+				}
+			}
+		}
+
+		.borderCountries {
+			.title {
+				font-weight: 600;
+				margin: 2em 0 1em;
+			}
+			.list {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: flex-start;
+				gap: 0.5em 1em;
+
+				.item {
+					all: unset;
+					cursor: default;
+					margin: 0.5em 0;
+					padding: 1em;
+					border-radius: 5px;
+					background-color: var(--bg-color-element);
+					box-shadow: 0px 0px 50px 5px var(--box-shadow-header);
+					opacity: 0.8;
+
+					&:hover {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.countryDetails {
+		padding: 0 5em;
+
+		.containerInfos {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			margin: 1.5em 0 0;
+
+			.flag {
+				width: 30%;
+				height: 350px;
+			}
+
+			.infos {
+				padding: 2em;
+				display: flex;
+				flex-direction: column;
+				margin-left: 5em;
+				width: 50%;
+
+				.infosListGroup {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					width: 100%;
+
+					.infoList:first-child {
+						flex: 1;
+					}
+				}
+			}
+
+			.borderCountries {
+				display: flex;
+				align-items: flex-start;
+
+				.title {
+					margin: 0;
+					width: 35%;
+					margin-right: 0.5em;
+				}
+
+				.list {
+					.item {
+						margin: 0;
+
+						padding: 0.5em 1em;
+					}
+				}
+			}
+		}
+	}
+}

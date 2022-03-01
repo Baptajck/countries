@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import s from './Header.module.scss';
 
 import SwitchTheme from '../../components/SwitchTheme/SwitchTheme';
@@ -8,7 +9,9 @@ const Header = () => {
 
 	return (
 		<header className={s.header}>
-			<h1 className={s.title}>Where in the world?</h1>
+			<NavLink to='/' className={s.link}>
+				<h1 className={s.title}>Where in the world?</h1>
+			</NavLink>
 			<SwitchTheme changeTheme={changeTheme} setChangeTheme={setChangeTheme} />
 		</header>
 	);

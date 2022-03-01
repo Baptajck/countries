@@ -1,13 +1,15 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useContext } from 'react';
+import { NavLink } from 'react-router-dom';
 import s from './Home.module.scss';
 
+import { CountriesContext } from '../../context/CountriesContext';
 import SearchIcon from '../../assets/svg/search-outline.svg?component';
 import ChevronDown from '../../assets/svg/chevron-down-outline.svg?component';
 
 import Card from '../../components/Card/Card';
 
 const Home = () => {
-	const [countries, setCountries] = useState([]);
+	const countries = useContext(CountriesContext);
 	const [search, setSearch] = useState('');
 	const [searchCountries, setSearchCountries] = useState([]);
 	const [regionCountries, setRegionCountries] = useState('');
@@ -19,16 +21,6 @@ const Home = () => {
 		'Oceania',
 	]);
 	const refDetails = useRef(null);
-
-	useEffect(async () => {
-		try {
-			const res = await fetch('https://restcountries.com/v2/all');
-			const data = await res.json();
-			setCountries(data);
-		} catch (error) {
-			console.log(error);
-		}
-	}, []);
 
 	useEffect(() => {
 		const results = countries.filter(country => {
@@ -45,7 +37,7 @@ const Home = () => {
 	}, [search, regionCountries, countries]);
 
 	return (
-		<main
+		<div
 			className={s.home}
 			onClick={() => refDetails.current.removeAttribute('open')}
 		>
@@ -91,17 +83,23 @@ const Home = () => {
 			</div>
 			<section className={s.cards}>
 				{searchCountries.map((country, i) => (
-					<Card
-						key={i}
-						name={country.name}
-						region={country.region}
-						flag={country.flags.png}
-						capital={country.capital}
-						population={country.population}
-					/>
+					<div key={i}>
+						<NavLink
+							to={`/${country.alpha3Code.toLowerCase()}`}
+							className={s.navlink}
+						>
+							<Card
+								name={country.name}
+								region={country.region}
+								flag={country.flags.png}
+								capital={country.capital}
+								population={country.population}
+							/>
+						</NavLink>
+					</div>
 				))}
 			</section>
-		</main>
+		</div>
 	);
 };
 
