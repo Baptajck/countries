@@ -9,7 +9,7 @@ const Header = () => {
 
 	return (
 		<header className={s.header}>
-			<NavLink to='/' className={s.link}>
+			<NavLink to='/countries' className={s.link}>
 				<h1 className={s.title}>Where in the world?</h1>
 			</NavLink>
 			<SwitchTheme changeTheme={changeTheme} setChangeTheme={setChangeTheme} />

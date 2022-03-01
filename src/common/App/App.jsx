@@ -32,8 +32,8 @@ const App = () => {
 				<Header />
 				<main>
 					<Routes>
-						<Route path='/' element={<Home />} />
-						<Route path=':slug' element={<CountryDetails />} />
+						<Route path='/countries' element={<Home />} />
+						<Route path='/countries/:slug' element={<CountryDetails />} />
 					</Routes>
 				</main>
 			</CountriesProvider>
