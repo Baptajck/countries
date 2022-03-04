@@ -57,6 +57,6 @@ Mobile screenshot
 
 ## Author
 
-- Website - [Axurynn](https://baptjack.fr)
-- Frontend Mentor - [@axurynn](https://www.frontendmentor.io/profile/Baptajck)
+- Website - [Baptjack](https://baptjack.fr)
+- Frontend Mentor - [@baptjack](https://www.frontendmentor.io/profile/Baptajck)
 
